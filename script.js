@@ -1,4 +1,4 @@
-function hello() {
+function moonPhase() {
     const httpGetRequest = new XMLHttpRequest();
     httpGetRequest.open("GET", "https://weather.visualcrossing.com/VisualCrossingWebServices/" +
         "rest/services/weatherdata/forecast?aggregateHours=24&includeAstronomy=true&" +
@@ -14,28 +14,44 @@ function hello() {
 
             var moon_phase = '';
             if (moon_phase_num == 1) {
-                moon_phase = 'New Moon';
+                document.getElementById("moon_phase_pic").setAttribute("src", "media/new_moon.jpg");
+                document.getElementById("moon_phase_text").innerText = "New Moon";
+                moon_phase = "New Moon";
             }
             else if (0 < moon_phase_num < 0.25) {
-                moon_phase = 'Waxing Crescent';
+                document.getElementById("moon_phase_pic").setAttribute("src", "media/waxing_crescent.jpg");
+                document.getElementById("moon_phase_text").innerText = "Waxing Crescent";
+                moon_phase = "Waxing Crescent";
             }
             else if (moon_phase_num == 0.25) {
-                moon_phase = 'First Quarter';
+                document.getElementById("moon_phase_pic").setAttribute("src", "media/first_quarter.jpg");
+                document.getElementById("moon_phase_text").innerText = "First Quarter";
+                moon_phase = "First Quarter";
             }
             else if (0.25 < moon_phase_num < 0.5) {
-                moon_phase = 'Waxing Gibbous';
+                document.getElementById("moon_phase_pic").setAttribute("src", "media/waxing_gibbous.jpg");
+                document.getElementById("moon_phase_text").innerText = "Waxing Gibbous";
+                moon_phase = "Waxing Gibbous";
             }
             else if (moon_phase_num == 0.5) {
-                moon_phase = 'Full Moon';
+                document.getElementById("moon_phase_pic").setAttribute("src", "media/full_moon.jpg");
+                document.getElementById("moon_phase_text").innerText = "Full Moon";
+                moon_phase = "Full Moon";
             }
             else if (0.5 < moon_phase_num < 0.75) {
-                moon_phase = 'Waning Gibbous';
+                document.getElementById("moon_phase_pic").setAttribute("src", "media/waning_gibbous.jpg");
+                document.getElementById("moon_phase_text").innerText = "Waning Gibbous";
+                moon_phase = "Waning Gibbous";
             }
             else if (moon_phase_num == 0.75) {
-                moon_phase = 'Last Quarter';
+                document.getElementById("moon_phase_pic").setAttribute("src", "media/last_quarter.jpg");
+                document.getElementById("moon_phase_text").innerText = "Last Quarter";
+                moon_phase = "Last Quarter";
             }
             else if (0.75 < moon_phase_num < 1) {
-                moon_phase = 'Waning Crescent';
+                document.getElementById("moon_phase_pic").setAttribute("src", "media/waning_crescent.jpg");
+                document.getElementById("moon_phase_text").innerText = "Waning Crescent";
+                moon_phase = "Waning Crescent";
             }
             else {
                 moon_phase = "Error";
